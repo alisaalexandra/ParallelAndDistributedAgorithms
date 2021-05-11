@@ -25,7 +25,7 @@ public class MyThread extends Thread {
       }
    }
 
-   public synchronized void add(int index) {
+   private synchronized void add(int index) {
       bigInteger = bigInteger.add(BigInteger.valueOf(arr[index]));
    }
 }

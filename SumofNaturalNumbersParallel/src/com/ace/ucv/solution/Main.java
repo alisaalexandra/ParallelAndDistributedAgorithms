@@ -18,7 +18,7 @@ public class Main {
       long milliseconds;
       Map<String, Integer> files = Util.getFileNames();
       for (Map.Entry<String, Integer> entry : files.entrySet()) {
-         int[] numbers = Util.getValuesFromFile(entry.getKey(), entry.getValue());
+         int[] numbers = Util.getValuesFromFile(entry.getKey());
          System.out.print("File name: " + entry.getKey());
          startTime = System.nanoTime();
          int min = 0;
@@ -31,6 +31,7 @@ public class Main {
             max = max + hop;
             bigInteger = MyThread.bigInteger;
          }
+
          endTime = System.nanoTime();
          duration = (endTime - startTime);
          minutes = TimeUnit.MINUTES.convert(duration, TimeUnit.NANOSECONDS);
@@ -40,7 +41,8 @@ public class Main {
          System.out.print(" Seconds: " + seconds);
          System.out.println(" Milliseconds: " + milliseconds);
          System.out.println(bigInteger);
+         bigInteger = new BigInteger("0");
          System.out.println();
+          }
       }
    }
-}

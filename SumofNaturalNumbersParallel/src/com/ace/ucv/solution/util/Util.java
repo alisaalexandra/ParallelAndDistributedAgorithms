@@ -4,8 +4,10 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Util {
 
@@ -35,6 +37,20 @@ public class Util {
       fileNamesByDigits.put("1E8N-7Digits.txt", 100_000_000);
       fileNamesByDigits.put("1E8N-9Digits.txt", 100_000_000);
       return fileNamesByDigits;
+   }
+   public static int[] getValuesFromFile(String fileName) {
+      File file = new File(Paths.get("").toAbsolutePath().toString() + "\\" + fileName);
+      try {
+         List<String> strings = new ArrayList<>();
+         List<String> numbersAsStrings = Files.readAllLines(file.toPath());
+         numbersAsStrings.parallelStream().forEachOrdered(line -> strings.addAll(Arrays.asList(line.split(" "))));
+         List<Integer> numbers = strings.stream().map(Integer::parseInt).collect(Collectors.toList());
+         return numbers.stream().mapToInt(i -> i).toArray();
+
+      } catch (IOException e) {
+         e.printStackTrace();
+      }
+      return null;
    }
 
    public static int[] getValuesFromFile(String fileName, int capacity) {
