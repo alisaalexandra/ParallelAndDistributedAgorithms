@@ -1,0 +1,2 @@
+D:\Facultate\SEM2\MPI\SumMPI\Debug\SumMPI.exe
+D:\Facultate\SEM2\MPI\SumMPI\Debug\SumMPI.pdb

@@ -1,0 +1,8 @@
+﻿  SumMPI.cpp
+D:\Facultate\SEM2\MPI\SumMPI\SumMPI.cpp(24,18): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\Facultate\SEM2\MPI\SumMPI\SumMPI.cpp(25,10): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\Facultate\SEM2\MPI\SumMPI\SumMPI.cpp(22,13): warning C4101: 'status': unreferenced local variable
+D:\Facultate\SEM2\MPI\SumMPI\SumMPI.cpp(17,18): warning C4101: 'local_chunk_size': unreferenced local variable
+D:\Facultate\SEM2\MPI\SumMPI\SumMPI.cpp(19,6): warning C4101: 'received_chunk_size': unreferenced local variable
+D:\Facultate\SEM2\MPI\SumMPI\SumMPI.cpp(20,7): warning C4101: 'received_chunk': unreferenced local variable
+  SumMPI.vcxproj -> D:\Facultate\SEM2\MPI\SumMPI\Debug\SumMPI.exe
